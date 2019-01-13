@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Sebastian-Alejandro">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{~/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link th:href="@{~/css/mdb.min.css}" rel="stylesheet">
+    <!-- DataTables -->
+    <link th:href="@{~/css/datatables.min.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body class="fixed-sn white-skin" data-gr-c-s-loaded="true">
+
+    <!--Main Navigation-->
+    <header id="header">
+
+        <!-- Sidebar navigation -->
+        <div id="slide-out" class="side-nav fixed">
+            <ul class="custom-scrollbar">
+                <!-- Logo -->
+                <li class="logo-sn waves-effect">
+                    <div class="text-center">
+                        <a href="#" class="pl-0"><i class="fas fa-code fa-4x"></i></a>
+                    </div>
+                </li>
+                <!--/. Logo -->
+                <hr>
+                <!-- Side navigation links -->
+                <li>
+                    <ul class="collapsible collapsible-accordion">
+                        <li><a th:href="@{~/inventarioActual}" class="collapsible-header waves-effect"><i class="fas fa-list"></i>
+                            Inventario Actual</a></li>
+                        <li><a th:href="@{~/comprasEntrantes}" class="collapsible-header waves-effect"><i class="fas fa-chart-line"></i>
+                            Compras Entrantes</a></li>
+                        <li><a th:href="@{~/ventasSalientes}" class="collapsible-header waves-effect"><i class="fas fa-dollar-sign"></i>
+                            Ventas Salientes</a></li>
+                        <li><a th:href="@{~/reportes}" class="collapsible-header waves-effect"><i class="fas fa-chart-pie"></i>
+                            Reportes</a></li>
+                        <li><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-box"></i> Productos<i
+                                class="fas fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="../dashboards/v-1.html" class="waves-effect">Mostrar Todos</a>
+                                    </li>
+                                    <li><a href="../dashboards/v-2.html" class="waves-effect">Agregar Nuevo</a>
+                                    </li>
+                                    <li><a href="../dashboards/v-3.html" class="waves-effect">Modificar Producto</a>
+                                    </li>
+                                    <li><a href="../dashboards/v-4.html" class="waves-effect">Eliminar Producto</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--/. Side navigation links -->
+            </ul>
+            <div class="sidenav-bg mask-strong"></div>
+        </div>
+        <!--/. Sidebar navigation -->
+
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar double-nav">
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a href="#" data-activates="slide-out" class="button-collapse black-text"><i class="fas fa-bars"></i></a>
+            </div>
+
+            <!--Navbar links-->
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown notifications-nav">
+                    <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <span class="badge red">3</span> <i class="fas fa-bell"></i>
+                        <span class="d-none d-md-inline-block">Notificaciones</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-money-bill-alt mr-2" aria-hidden="true"></i>
+                            <span>New order received</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="far fa-money-bill-alt mr-2" aria-hidden="true"></i>
+                            <span>New order received</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-chart-line mr-2" aria-hidden="true"></i>
+                            <span>Your campaign is about to end</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="25">
+                        <span class="clearfix d-none d-sm-inline-block">Sarha Smith</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Ver mi perfil</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+                    </div>
+                </li>
+
+            </ul>
+            <!--/Navbar links-->
+        </nav>
+        <!-- /.Navbar -->
+
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--footer start-->
+    <footer id="footer">
+        <div class="text-center py-5">
+            <div class="credits">
+            <span>Desarrollado en <i class="fab fa-java fa-2x"></i>Java por <a href="https://sebastian-alejandro.com/"
+                                                                               class="">Sebastián Alejandro Herrera</a></span>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <!-- javascripts -->
+    <div id="scripts">
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script th:src="@{~/js/jquery-3.3.1.min.js}"></script>
+        <!-- Bootstrap tooltips -->
+        <script th:src="@{~/js/popper.min.js}" type="text/javascript"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script th:src="@{~/js/bootstrap.js}" type="text/javascript"></script>
+        <!-- MDB core JavaScript -->
+        <script th:src="@{~/js/mdb.min.js}" type="text/javascript"></script>
+        <!-- DataTables -->
+        <script th:src="@{~/js/datatables.min.js}" type="text/javascript"></script>
+        <!-- DataTables-Header -->
+        <script th:src="@{~/js/datatable-header.js}" type="text/javascript"></script>
+        <script>
+            // SideNav Initialization
+            $(".button-collapse").sideNav();
+
+            var container = document.querySelector('.custom-scrollbar');
+            Ps.initialize(container, {
+                wheelSpeed: 2,
+                wheelPropagation: true,
+                minScrollbarLength: 20
+            });
+
+            // Tooltips Initialization
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+
+        </script>
+    </div>
+</body>
+</html>
